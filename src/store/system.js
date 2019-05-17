@@ -2,26 +2,26 @@ export default {
   // 获得模块信息
   getModules: function () {
     return [{
-      id: '1',
-      name: 'SRM'
+      id: '/srm',
+      name: '供应商管理'
     }, {
-      id: '2',
-      name: 'CRM'
+      id: '/crm',
+      name: '客户管理'
     }, {
-      id: '3',
+      id: '/config',
       name: '参数设置'
     }]
   },
   // 获得菜单信息
-  getMenus: function () {
+  getMenus: function (moduleName) {
     return [{
-      id: 'logo',
+      id: '/srm/dashboard',
       name: 'SRM'
     }, {
       id: '1',
       name: '订单管理',
       submenus: [{
-        id: '1-1',
+        id: '/srm/purchase',
         name: '采购订单'
       }, {
         id: '1-2',

@@ -6,9 +6,9 @@
   </div>
 </template>
 <script>
-import NavMenu from './NavMenu'
-import ToolBar from './ToolBar'
-import AppMain from './AppMain'
+import NavMenu from '@/components/Layout/NavMenu'
+import ToolBar from '@/components/Layout/ToolBar'
+import AppMain from '@/components/Layout/AppMain'
 export default {
   components: {
     NavMenu,

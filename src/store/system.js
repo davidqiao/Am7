@@ -24,7 +24,7 @@ export default {
         id: '/srm/purchase',
         name: '采购订单'
       }, {
-        id: '1-2',
+        id: '/srm/outsourcing',
         name: '委外订单'
       }]
     }, {

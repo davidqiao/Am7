@@ -8,12 +8,12 @@ export default {
   name: 'AppMain',
   computed: {
     key () {
-      return this.$route.fullPath /* 为了达到刷新的效果 */
+      return this.$route.fullPath // 为了达到刷新的效果
     }
   }
 }
 </script>
-<style scope>
+<style scoped>
   .app-main-container {
     height: calc(100vh - 65px);;
     width: 100%;

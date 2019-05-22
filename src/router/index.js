@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/components/Layout'
+import Index from '@/views'
 
 Vue.use(Router)
 
@@ -12,19 +12,10 @@ export default new Router({
     children: [{
       path: 'purchase',
       name: 'srm_purchase',
-      meta: {
-        ormID: 'P',
-        title: '采购订单'
-
-      },
-      component: () => import('@/components/Table')
+      component: () => import('@/views/srm/Purchase')
     }, {
       path: 'outsourcing',
       name: 'srm_outsourcing',
-      meta: {
-        ormID: 'W',
-        title: '委外订单'
-      },
       component: () => import('@/components/Table')
     }, {
       path: 'dashboard',
@@ -38,9 +29,6 @@ export default new Router({
     children: [{
       path: 'sales',
       name: 'crm_sales',
-      meta: {
-        title: '销售订单'
-      },
       component: () => import('@/components/Table')
     }, {
       path: 'dashboard',

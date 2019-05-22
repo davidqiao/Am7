@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <h1 class="dashboard-index">这是一个默认仪表盘</h1>
+  <div class="div">
+    <div class="div1"></div>
+    <div class="div2"></div>
   </div>
 </template>
 <script>
@@ -8,8 +9,17 @@ export default {
   name: 'Dashboard'
 }
 </script>
-<style scope>
-  .dashboard-index{
-    display: inline
+<style scoped>
+  .div{
+    height: 100%;
+    border:blue solid 10px;
+  }
+  .div1{
+    height: 40px;
+    border:red solid 10px;
+  }
+  .div2{
+    height: 100%;
+    border:yellowgreen solid 10px;
   }
 </style>

@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import system from '@/store/system'
+import system from '@/models/system'
 export default {
   name: 'NavMenu',
   data: function () {
@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     handleSelect (key, keyPath) {
-      console.log(key, keyPath)
+
     }
   }
 }

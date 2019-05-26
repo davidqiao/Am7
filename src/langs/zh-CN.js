@@ -16,5 +16,21 @@ export default {
     crm: {
       sale: '销售订单'
     }
+  },
+  modules: {
+    srm: '供应商管理',
+    crm: '客户管理',
+    cfg: '系统设置'
+  },
+  menus: {
+    srm: {
+      order: '订单管理',
+      purchase: '采购订单',
+      outsourcing: '委外订单'
+    },
+    crm: {
+      order: '订单管理',
+      sale: '销售订单'
+    }
   }
 }

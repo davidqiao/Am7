@@ -5,8 +5,8 @@
   </div>
 </template>
 <script>
-import NavMenu from '@/components/Layout/NavMenu'
-import AppMain from '@/components/Layout/AppMain'
+import NavMenu from './NavMenu'
+import AppMain from './AppMain'
 export default {
   components: {
     NavMenu,

@@ -1,14 +1,15 @@
 export default{
   path: '/crm',
   name: 'crm',
-  component: () => import('@/Views'),
+  component: () => import('@/components/Layout'),
+  redirect: '/crm/Dashboard',
   children: [{
-    path: 'sales',
-    name: 'crm/sales',
-    component: () => import('@/views/crm/Sale')
-  }, {
     path: 'dashboard',
     name: 'crm/dashboard',
     component: () => import('@/components/Dashboard')
+  }, {
+    path: 'sale',
+    name: 'crm/sale',
+    component: () => import('@/views/crm/Sale')
   }]
 }

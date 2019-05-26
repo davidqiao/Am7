@@ -3,19 +3,19 @@
     class="el-menu"
     :default-active="activeIndex"
     mode="horizontal"
-    @select="handleSelect"
+    @select="menuSelect"
     router
   >
     <el-submenu index="0">
       <template #title><svg-icon iconClass="menu"/></template>
-      <el-menu-item v-for="item in modules" :key="item.id" :index="item.path">{{item.name}}</el-menu-item> <!--模块菜单-->
+      <el-menu-item v-for="item in modules" :key="item.name" :index="item.path">{{$t(item.title)}}</el-menu-item> <!--模块菜单-->
     </el-submenu>
     <template v-for="menu in menus">
-      <el-submenu v-if="menu.submenus" :key="menu.id" :index="menu.id"> <!--功能菜单-->
-        <template #title>{{menu.name}}</template>
-        <el-menu-item v-for="sub in menu.submenus" :key="sub.id" :index="sub.path">{{sub.name}}</el-menu-item> <!--功能子项-->
+      <el-submenu v-if="menu.submenus" :key="menu.name" :index="menu.name"> <!--功能菜单-->
+        <template #title>{{$t(menu.title)}}</template>
+        <el-menu-item v-for="sub in menu.submenus" :key="sub.name" :index="sub.path">{{$t(sub.title)}}</el-menu-item> <!--功能子项-->
       </el-submenu>
-      <el-menu-item v-else :key="menu.id" :index="menu.path">{{menu.name}}</el-menu-item> <!--logo-->
+      <el-menu-item v-else :key="menu.name" :index="menu.path">{{$t(menu.title)}}</el-menu-item> <!--logo-->
     </template>
     <el-menu-item class="right-menu">
       <template #title>
@@ -59,18 +59,19 @@ export default {
     return {
       activeIndex: '',
       modules: System.getModules(),
-      moduleId: ''
+      moduleName: ''
     }
   },
   computed: {
     menus () {
-      return System.getMenus(this.moduleId)
+      return System.getMenus(this.moduleName)
     }
   },
   methods: {
-    handleSelect (key, keyPath) {
+    menuSelect (key, keyPath) {
       if (keyPath[0] === '0') {
-        this.moduleId = key
+        // key会自动在最前面前加一个'/'
+        this.moduleName = key.replace('/', '')
       }
     },
     languageCommand (command) {

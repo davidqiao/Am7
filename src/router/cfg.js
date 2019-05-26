@@ -1,7 +1,8 @@
 export default{
   path: '/config',
   name: 'config',
-  component: () => import('@/Views'),
+  component: () => import('@/components/Layout'),
+  redirect: 'config/list',
   children: [{
     path: 'list',
     name: 'config/list',

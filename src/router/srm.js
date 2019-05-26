@@ -1,7 +1,8 @@
 export default {
   path: '/srm',
   name: 'srm',
-  component: () => import('@/Views'),
+  component: () => import('@/components/Layout'),
+  redirect: '/srm/Dashboard',
   children: [{
     path: 'dashboard',
     name: 'srm/dashboard',

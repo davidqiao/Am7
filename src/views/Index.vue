@@ -14,14 +14,3 @@ export default {
   }
 }
 </script>
-<style scope>
-  .div-container-flex{
-    height: 100%;
-    width:100%;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    overflow: hidden;
-  }
-</style>

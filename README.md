@@ -1,6 +1,6 @@
 # Am7
 
-> 前端基于Vue实现的B2B门户系统
+> 前端基于Vue实现的后台管理系统
 
 ## Build Setup
 

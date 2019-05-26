@@ -5,9 +5,9 @@
     </el-row>
     <el-row>
       <div class="el-row-left">
-        <el-button size="mini">创建</el-button>
-        <el-button size="mini">导入</el-button>
-        <el-button size="mini" v-if="show">删除</el-button>
+        <el-button size="mini">{{$t('components.toolbar.new')}}</el-button>
+        <el-button size="mini">{{$t('components.toolbar.import')}}</el-button>
+        <el-button size="mini" v-if="show">{{$t('components.toolbar.delete')}}</el-button>
       </div>
       <div class="el-row-right">
         <el-pagination

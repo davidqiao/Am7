@@ -3,7 +3,7 @@
     <div>
       <toolbar
       v-if="tableData"
-      :title="$t('views.srm.purchase')"
+      :title="$t('views.crm.sale')"
       :limit="limit"
       @page-change="pageChange"
       :count="tableData.count">
@@ -22,7 +22,7 @@
 <script>
 import BaseTable from '@/components/Table'
 import Toolbar from '@/components/Toolbar'
-import model from '@/api/srm/purchase'
+import model from '@/api/crm/sale'
 import system from '@/api/system'
 export default {
   name: 'Purchase',
